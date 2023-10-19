@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "name": "fetch-yp",
+  "version": "1.0.0",
+  "description": "Fetch Xiph listing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizgrav/fetch-yp.git"
+  },
+  "author": "Yannis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wizgrav/fetch-yp/issues"
+  },
+  "homepage": "https://github.com/wizgrav/fetch-yp#readme",
+  "dependencies": {
+    "fast-xml-parser":"4.3.2",
+    "node-fetch": "3.3.2"
+  },
+  "bin" : {
+    "execute" : "index.js"
+  } 
+}
