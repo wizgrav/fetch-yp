@@ -12,7 +12,10 @@ const text = await res.text();
 const obj = parser.parse(text);
 const ret = [];
 let c = 1;
+const rx = /^https\:\/\//;
+
 obj.directory.entry.forEach(el => {
-    ret.push({ id: c++, t: el.server_name, g: el.genre, u: el.listen_url });
+    if(el.listen_url && rx.test(el.listen_url))
+        ret.push({ id: c++, t: el.server_name, g: el.genre, u: el.listen_url });
 });
 fs.writeFileSync(args.length ? args[0] : 'yp.json', JSON.stringify(ret));
